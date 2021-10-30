@@ -1,3 +1,5 @@
+program p4;
+
 uses graphABC;
 
 begin
