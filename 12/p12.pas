@@ -19,6 +19,7 @@ var
             4 : setpenstyle(psDot);
             5 : setpenstyle(psDashDot);
             6 : setpenstyle(psDashDotDot);
+        end;
 
         moveto(x, y);
         lineto(x + 20,y - 50);
