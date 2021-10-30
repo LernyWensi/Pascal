@@ -10,7 +10,7 @@ implementation
       tmp: real;
     begin
       tmp := (a + b) / 2;
-      geometricMean := tmp;
+      arithmeticalMean := tmp;
     end;
   
   function geometricMean(a, b: integer): real;

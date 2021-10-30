@@ -16,7 +16,7 @@ begin
     readln(s);
 
     writeln();
-    writeln('it is ', devide(a)); 
+    writeln('it is ', divide(a)); 
 
     writeln();
     writeln('product = ',multi(s));

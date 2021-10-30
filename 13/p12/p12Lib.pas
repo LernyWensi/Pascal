@@ -5,9 +5,9 @@ interface
   function multi(a: string): integer;
   
 implementation
-  function divide(a: integer): boolean;
+  function divide(a: integer): string;
     var 
-      tmp: boolean;
+      tmp: string;
     begin
       if a mod 7 = 0 then
         tmp := 'true'
