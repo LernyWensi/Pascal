@@ -31,34 +31,33 @@ var
             for i := 1 to amountOfListItems do
                 begin
                     if helper^.value mod 2 = 0 then
-                        if counterEven = 0 then
-                            begin
-                                evenHead^.value := list^.value;
-                                counterEven := 1;
-                            end
-                        else  
-                            begin
-                                new(evenLast^.next);
-                                evenLast := evenLast^.next;
-                                evenLast^.value := helper^.value;
-                                evenLast^.next := nil;
-                            end
-                      
-      
+                        begin
+                            if counterEven = 0 then
+                                evenLast^.value := helper^.value
+                            else  
+                                begin
+                                    new(evenLast^.next);
+                                    evenLast := evenLast^.next;
+                                    evenLast^.value := helper^.value;
+                                    evenLast^.next := nil;
+                                end;
+                                
+                            counterEven := 1;
+                        end 
                     else
-                        if counterOdd = 0 then
-                            begin
-                                oddHead^.value := list^.value;
-                                counterOdd := 1
-                            end
-                        else
-                            begin
-                                new(oddLast^.next);
-                                oddLast := oddLast^.next;
-                                oddLast^.value := helper^.value;
-                                oddLast^.next := nil; 
-                                counterOdd := 1;
-                            end;
+                        begin
+                            if counterOdd = 0 then
+                                oddHead^.value := helper^.value
+                            else
+                                begin
+                                    new(oddLast^.next);
+                                    oddLast := oddLast^.next;
+                                    oddLast^.value := helper^.value;
+                                    oddLast^.next := nil; 
+                                end;
+                                
+                            counterOdd := 1;
+                        end;
                         
                     helper := helper^.next;
                 end;
